@@ -1,0 +1,57 @@
+:root {
+
+    /* 
+       CORES
+        */
+
+    --cor-fundo: rgb(231, 232, 233);
+    --cor-fundo-artigo: rgb(245, 245, 245);
+
+    --cor-texto: rgb(0, 0, 0);
+    --cor-texto-secundario: rgb(80, 80, 80);
+
+    --cor-borda: rgb(190, 190, 190);
+    --cor-borda-input: rgb(150, 150, 150);
+
+    --cor-primaria: rgb(50, 120, 200);
+    --cor-primaria-hover: rgb(30, 90, 170);
+
+    --cor-destaque: blue;
+    --cor-branco: white;
+    --cor-sombra: #000000;
+
+
+    /* 
+       TIPOGRAFIA
+        */
+
+    --fonte-pequena: 14px;
+    --fonte-corpo: 16px;
+    --fonte-texto: 17px;
+    --fonte-subtitulo: 20px;
+    --fonte-titulo: 22px;
+    --fonte-titulo-principal: 28px;
+
+
+    /* 
+       ESPAÇAMENTOS
+        */
+
+    --espaco-1: 5px;
+    --espaco-2: 8px;
+    --espaco-3: 10px;
+    --espaco-4: 15px;
+    --espaco-5: 20px;
+    --espaco-6: 30px;
+
+
+    /* 
+       OUTROS
+        */
+
+    --raio-pequeno: 5px;
+    --raio-medio: 8px;
+    --raio-grande: 10px;
+
+    --sombra: 1px 1px 5px var(--cor-sombra);
+}

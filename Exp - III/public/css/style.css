@@ -1,0 +1,487 @@
+/* 
+   ESTRUTURA GERAL
+    */
+
+html,
+body {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    height: 100vh;
+    width: 100vw;
+
+    gap: var(--espaco-1);
+
+    margin: 0px;
+    padding: 0px;
+
+    overflow: hidden;
+}
+
+
+/* 
+   MENU LATERAL
+    */
+
+aside {
+
+    grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--cor-fundo);
+    box-shadow: var(--sombra);
+
+    padding: var(--espaco-1);
+}
+
+
+/* Logo */
+
+aside img {
+
+    margin-top: var(--espaco-5);
+
+    width: 100%;
+    max-height: 180px;
+
+    object-fit: contain;
+}
+
+
+/* Título */
+
+aside h3 {
+
+    text-align: center;
+
+    font-size: var(--fonte-titulo);
+
+    margin: var(--espaco-4) 0;
+}
+
+
+/* 
+   CONTROLE DO MENU HAMBÚRGUER
+    */
+
+#menu {
+
+    display: none;
+
+    background-color: transparent;
+
+    all: unset;
+}
+
+
+#lblMenu {
+
+    display: none;
+
+    font-size: x-large;
+}
+
+
+/* 
+   NAVEGAÇÃO
+    */
+
+nav {
+
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--espaco-3);
+
+    gap: var(--espaco-1);
+}
+
+
+nav a {
+
+    display: inline-block;
+
+    text-transform: uppercase;
+
+    margin: 0px;
+    padding: 12px;
+
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    cursor: pointer;
+
+    font-size: larger;
+
+    border-radius: var(--raio-pequeno);
+
+    transition: transform 0.35s ease, color 0.2s ease;
+}
+
+
+/* Interação dos links */
+
+nav a:hover {
+
+    color: var(--cor-destaque);
+
+    transform: scale(1.30);
+}
+
+
+/* 
+   CONTEÚDO PRINCIPAL
+    */
+
+main {
+
+    grid-column: 2 / 6;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto;
+
+    padding: var(--espaco-4);
+
+    justify-content: start;
+
+    background-color: var(--cor-fundo);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* 
+   SEÇÕES
+    */
+
+section {
+    margin-bottom: var(--espaco-6);
+}
+
+
+section h2 {
+
+    border-bottom: 2px solid var(--cor-texto-secundario);
+
+    padding-bottom: var(--espaco-2);
+}
+
+
+section p {
+
+    font-size: var(--fonte-texto);
+
+    line-height: 1.6;
+}
+
+
+/* 
+   PROJETOS / ARTIGOS
+    */
+
+article {
+
+    padding: var(--espaco-4);
+
+    margin: var(--espaco-4) 0;
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio-medio);
+
+    background-color: var(--cor-fundo-artigo);
+}
+
+
+article h3 {
+
+    margin-top: 0px;
+}
+
+
+/* 
+   FORMULÁRIO
+    */
+
+form {
+
+    max-width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: var(--espaco-1);
+    box-shadow: var(--sombra);
+    border-radius: var(--raio-grande);
+}
+
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    border-radius: var(--raio-grande);
+}
+
+
+legend {
+
+    font-size: var(--fonte-subtitulo);
+
+    font-weight: bold;
+}
+
+
+/* Campos */
+
+input {
+
+    background-color: aliceblue;
+
+    padding: var(--espaco-3);
+
+    border: 1px solid var(--cor-borda-input);
+
+    border-radius: var(--raio-pequeno);
+
+    font-size: var(--fonte-corpo);
+}
+
+
+/* Campo selecionado */
+
+input:focus {
+
+    outline: none;
+
+    background-color: white;
+
+}
+
+
+/* 
+   BOTÕES
+    */
+
+button {
+
+    padding: var(--espaco-3) var(--espaco-5);
+
+    border: none;
+
+    border-radius: var(--raio-pequeno);
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branco);
+
+    font-size: var(--fonte-corpo);
+
+    cursor: pointer;
+}
+
+
+button:hover {
+
+    background-color: var(--cor-primaria-hover);
+}
+
+
+/* 
+   BREAKPOINT — 1400px
+    */
+
+@media (max-width: 1400px) {
+
+    aside {
+        padding: var(--espaco-2);
+    }
+
+
+    aside img {
+        max-height: 160px;
+    }
+
+
+    main {
+        height: 100%;
+        padding: var(--espaco-3);
+    }
+
+
+    section p {
+        line-height: 1.5;
+    }
+}
+
+
+/* 
+   BREAKPOINT — 1200px
+    */
+
+@media (max-width: 1200px) {
+
+    aside img {
+        max-height: 150px;
+    }
+}
+
+
+/* 
+   BREAKPOINT — 992px
+    */
+
+@media (max-width: 992px) {
+
+    aside img {
+        max-height: 120px;
+    }
+
+
+    nav a {
+        padding: 8px;
+    }
+}
+
+
+/* 
+   BREAKPOINT — 768px
+   MENU HAMBÚRGUER
+    */
+
+@media (max-width: 768px) {
+
+    /* Menu lateral */
+
+    aside {
+
+        grid-column: 1 / 6;
+
+        flex-direction: row;
+
+        align-items: center;
+    }
+
+
+    /* Logo */
+
+    aside img {
+
+        width: 100px;
+        height: 100px;
+
+        margin: 0;
+    }
+
+
+    /* Título */
+
+    aside h3 {
+
+        margin: 0 var(--espaco-3);
+    }
+
+
+    /* Navegação escondida */
+
+    nav {
+
+        display: none;
+
+        padding: 0;
+    }
+
+
+    /* Checkbox */
+
+    #menu {
+
+        display: flex;
+    }
+
+
+    /* Botão hambúrguer */
+
+    #lblMenu {
+
+        display: flex;
+    }
+
+
+    /* Menu aberto */
+
+    #menu:checked~nav {
+
+        display: flex;
+
+        flex-direction: row;
+    }
+
+
+    /* Conteúdo */
+
+    main {
+
+        grid-column: 1 / 6;
+    }
+}
+
+
+/* 
+   BREAKPOINT — 576px
+    */
+
+@media (max-width: 576px) {
+
+    aside {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        margin: auto;
+    }
+
+
+    aside h3 {
+
+        width: 100%;
+    }
+
+
+    nav {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    main {
+
+        padding: var(--espaco-2);
+    }
+
+
+    article {
+
+        padding: var(--espaco-2);
+    }
+}
+
+/* 
+ */
+
+
+#txtSucesso {
+    display: none;
+    color: white;
+    background-color: green;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
